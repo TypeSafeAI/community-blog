@@ -1,0 +1,17 @@
+{
+  "repository": "TypeSafeAI/community-blog",
+  "description": "Unofficial community notes about TypeSafe AI, typed decisions, tool interfaces, agent workflows, and developer experience.",
+  "topics": [
+    "typesafe-ai",
+    "jev",
+    "community",
+    "blog",
+    "documentation",
+    "developer-experience",
+    "html",
+    "ai-agents"
+  ],
+  "social_preview": "docs/discovery/assets/social-preview.png",
+  "status": "proposed-not-applied",
+  "note": "Capability-focused discovery metadata. Committing this file does not itself change GitHub repository settings."
+}
