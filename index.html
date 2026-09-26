@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TypeSafe AI Blog</title>
+    <title>TypeSafeAI Community Notes — Unofficial</title>
+    <meta name="description" content="Unofficial community notes about TypeSafe AI: typed decisions, tool boundaries, reproducible examples, and developer experience." />
+    <meta property="og:title" content="TypeSafeAI Community Notes — Unofficial" />
+    <meta property="og:description" content="Practical community notes, source links, and explicit limitations. Not the official TypeSafe AI blog." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <!-- Add canonical/absolute image metadata only after a public origin and raster asset are verified. -->
     <style>
       :root {
         color-scheme: light;
@@ -34,6 +40,10 @@
         color: #ffffff;
         box-shadow: 0 20px 60px rgba(20, 33, 61, 0.18);
       }
+
+      a { color: inherit; text-underline-offset: 0.2em; }
+      a:focus-visible { outline: 3px solid #9ec5ff; outline-offset: 4px; }
+      .community-links { line-height: 1.8; }
 
       .hero p,
       .post p {
@@ -104,19 +114,24 @@
     <main class="page">
       <section class="hero">
         <p class="eyebrow">Community Blog</p>
-        <h1>TypeSafe AI Blog</h1>
+        <h1>TypeSafeAI Community Notes</h1>
+        <p><strong>Unofficial community project — not the official TypeSafe AI team.</strong></p>
         <p>
           Notes, tutorials, and product thinking about building AI systems with safer schemas,
           predictable interfaces, and reliable developer workflows.
         </p>
+        <nav class="community-links" aria-label="Community resources">
+          <a href="https://github.com/TypeSafeAI/community-blog">Source and contributions</a> ·
+          <a href="https://docs.typesafe.ai">Official API documentation</a>
+        </nav>
       </section>
 
       <section class="posts" aria-labelledby="recent-posts-title">
         <h2 class="posts-title" id="recent-posts-title">Recent posts</h2>
         <div class="post-list">
-          <article class="post">
+          <article class="post" id="typed-contracts">
             <p class="meta">September 2026 · Introduction</p>
-            <h3>Why Type Safety Matters for AI Applications</h3>
+            <h3><a href="#typed-contracts">Why Type Safety Matters for AI Applications</a></h3>
             <p>
               Strong typing helps teams move AI features from prototypes to production with fewer
               runtime surprises. Contracts for prompts, tools, and model outputs make systems easier
@@ -129,13 +144,13 @@
             </ul>
           </article>
 
-          <article class="post">
+          <article class="post" id="tool-boundaries">
             <p class="meta">September 2026 · Tutorial</p>
-            <h3>Designing Safer Tool Calls with Typed Interfaces</h3>
+            <h3><a href="#tool-boundaries">Designing Safer Tool Calls with Typed Interfaces</a></h3>
             <p>
               Typed tool contracts help constrain model behavior and give developers structured data
-              they can confidently pass into downstream services. That means simpler validation and
-              better failure handling.
+              they can validate before considering downstream actions. A valid typed result is not
+              permission to execute: authorization and failure handling remain application responsibilities.
             </p>
             <ul class="tag-list" aria-label="Post topics">
               <li class="tag">Tooling</li>
@@ -144,9 +159,9 @@
             </ul>
           </article>
 
-          <article class="post">
+          <article class="post" id="community-notes">
             <p class="meta">September 2026 · Community</p>
-            <h3>What We Want This Blog to Share</h3>
+            <h3><a href="#community-notes">What We Want This Blog to Share</a></h3>
             <p>
               This space is for practical posts about TypeSafe AI: implementation patterns, lessons
               learned, case studies, and ideas that make AI systems more maintainable for everyone.
@@ -159,6 +174,12 @@
           </article>
         </div>
       </section>
+      <footer class="community-links">
+        <p>Community organization created by VC Moderator <a href="https://github.com/BunsDev">@BunsDev</a>.
+          These introductory notes are not benchmark results or claims of official endorsement.</p>
+        <p><a href="https://github.com/TypeSafeAI">Community projects</a> ·
+          <a href="https://typesafe.ai">Official TypeSafe AI website</a></p>
+      </footer>
     </main>
   </body>
 </html>
