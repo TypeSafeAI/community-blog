@@ -29,8 +29,12 @@ class SiteTests(unittest.TestCase):
         self.assertNotIn('rel="canonical"', self.text)
         self.assertEqual(self.page.scripts, [])
     def test_article_anchors(self):
-        for anchor in ['typed-contracts', 'tool-boundaries', 'community-notes']:
+        for anchor in ['jev-social', 'typed-contracts', 'tool-boundaries', 'community-notes']:
             self.assertIn(anchor, self.page.ids)
             self.assertIn('#' + anchor, self.page.links)
+    def test_jev_social_case_study_uses_current_release(self):
+        self.assertIn('The current release starts each socai child with telemetry disabled', ' '.join(self.text.split()))
+        self.assertIn('https://github.com/socai-io/jev-social/releases/latest', self.page.links)
+        self.assertIn('https://socai-io.github.io/jev-social/recorded-run/', self.page.links)
 
 if __name__ == '__main__': unittest.main()
