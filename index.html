@@ -129,6 +129,35 @@
       <section class="posts" aria-labelledby="recent-posts-title">
         <h2 class="posts-title" id="recent-posts-title">Recent posts</h2>
         <div class="post-list">
+          <article class="post" id="abstain-on-retrieved-code">
+            <p class="meta">Community example · Decision design</p>
+            <h3><a href="#abstain-on-retrieved-code">Give a code lookup an abstention option</a></h3>
+            <p>
+              A choice between two plausible files can force a misleading answer when neither excerpt
+              supports the question. Include an explicit <code>none_of_these</code> choice, and route it
+              back for human review rather than treating a typed answer as permission to act.
+            </p>
+            <p>
+              In one recorded FastAPI 0.162.0 lookup, six excerpts from <code>fastapi/routing.py</code>
+              and <code>fastapi/applications.py</code> were offered for a question about a built-in
+              GraphQL server. Neither excerpt set established that such a server existed. Jev selected
+              <code>none_of_these</code> in both runs, with reported scores of 0.92 and 0.94 when the
+              file order was swapped; the host returned <code>escalated</code> and <code>act: false</code>.
+            </p>
+            <p>
+              This is one question and two runs, not evidence of a general success rate. An abstention
+              can still be wrong, and missing evidence is not proof of absence. Inspect the excerpts and
+              source, keep authorization in application code, and test more cases before relying on the pattern.
+              The <a href="https://qorx.hashnode.dev/i-gave-jev-two-plausible-fastapi-files-neither-was-the-answer">case and recorded results</a>
+              provide the context. Disclosure: the contributor maintains Qorx, which retrieved the excerpts.
+            </p>
+            <ul class="tag-list" aria-label="Post topics">
+              <li class="tag">Decisions</li>
+              <li class="tag">Evidence</li>
+              <li class="tag">Limitations</li>
+            </ul>
+          </article>
+
           <article class="post" id="typed-contracts">
             <p class="meta">September 2026 · Introduction</p>
             <h3><a href="#typed-contracts">Why Type Safety Matters for AI Applications</a></h3>
